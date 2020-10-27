@@ -54,9 +54,7 @@ public class PalanaBavana2Adapater extends RecyclerView.Adapter<PalanaBavana2Ada
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-
         TextView tvTitle;
-
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.tvTitle);

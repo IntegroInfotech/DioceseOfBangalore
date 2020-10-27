@@ -117,9 +117,7 @@ public class BibleActivity extends AppCompatActivity implements NavigationView.O
             getWordOfGod(dateFormat.format(date));
             selecetdDate = date;
         }
-        //Log.i(TAG, "setCurrentDate: "+dateFormat.format(date));
     }
-
 
     private void getWordOfGod(String date) {
         Log.i(TAG, "getWordOfGod: " + date);
@@ -158,7 +156,6 @@ public class BibleActivity extends AppCompatActivity implements NavigationView.O
         });
     }
 
-
     @Override
     public void setTitle(CharSequence title) {
         TextView tvTitle = findViewById(R.id.title);
@@ -174,7 +171,6 @@ public class BibleActivity extends AppCompatActivity implements NavigationView.O
             datePickerTextView.setText(subtitle);
         }
     }
-
 
     private void storeDataInDB(final List<WordOfGod> wordOfGodList) {
         @SuppressLint("StaticFieldLeak")

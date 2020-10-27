@@ -37,12 +37,10 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.MyViewHo
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         final Gallery galleryItem = galleryArrayList.get(position);
-
         Picasso.with(context)
                 .load(galleryItem.getImage())
                 .placeholder(R.drawable.bg_placeholder)
                 .into(holder.ivGallery);
-
         holder.ivGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +59,6 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.MyViewHo
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView ivGallery;
-
         public MyViewHolder(View itemView) {
             super(itemView);
             ivGallery = itemView.findViewById(R.id.ivGallery);

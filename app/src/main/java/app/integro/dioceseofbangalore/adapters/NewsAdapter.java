@@ -63,7 +63,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-
         ImageView ivNews;
         TextView tvN_Title;
         TextView tvN_date;
@@ -71,7 +70,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
 
         public MyViewHolder(View itemView) {
             super(itemView);
-
             ivNews = itemView.findViewById(R.id.ivNews);
             tvN_date = itemView.findViewById(R.id.tvDate);
             tvN_Title = itemView.findViewById(R.id.tvTitle);

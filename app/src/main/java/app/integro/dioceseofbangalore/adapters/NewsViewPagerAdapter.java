@@ -43,7 +43,6 @@ public class NewsViewPagerAdapter extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-
         ImageView ivNews;
         TextView tvNews;
         RelativeLayout rlNews;
@@ -61,6 +60,7 @@ public class NewsViewPagerAdapter extends PagerAdapter {
                 .load(newsArrayList.get(position).getL_img())
                 .placeholder(R.drawable.bg_placeholder)
                 .into(ivNews);
+
         rlNews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

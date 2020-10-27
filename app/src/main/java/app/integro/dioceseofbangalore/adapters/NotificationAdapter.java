@@ -23,9 +23,10 @@ import app.integro.dioceseofbangalore.R;
 import app.integro.dioceseofbangalore.models.Notification;
 
 public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapter.MyViewHolder> {
+    private static final String TAG = "NotificationAdapter";
     private Context context;
     private ArrayList<Notification> notificationArrayList;
-    private static final String TAG = "NotificationAdapter";
+
     public NotificationAdapter(Context context, ArrayList<Notification> notificationsArrayList) {
         this.context = context;
         this.notificationArrayList = notificationsArrayList;

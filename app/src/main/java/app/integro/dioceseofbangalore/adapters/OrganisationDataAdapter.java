@@ -19,7 +19,6 @@ import app.integro.dioceseofbangalore.R;
 import app.integro.dioceseofbangalore.models.OrganisationData;
 
 public class OrganisationDataAdapter extends RecyclerView.Adapter<OrganisationDataAdapter.MyViewHolder> {
-
     private Context context;
     private ArrayList<OrganisationData> organisationDataArrayList;
 
@@ -40,7 +39,6 @@ public class OrganisationDataAdapter extends RecyclerView.Adapter<OrganisationDa
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         holder.tvTitle.setText(organisationDataArrayList.get(position).getName());
         holder.tvDescription.setText(organisationDataArrayList.get(position).getAddress() + "\n" + organisationDataArrayList.get(position).getDescription());
-
         holder.ivInstitutionMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

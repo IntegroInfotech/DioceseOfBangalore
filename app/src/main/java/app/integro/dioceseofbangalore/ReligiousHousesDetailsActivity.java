@@ -52,7 +52,6 @@ public class ReligiousHousesDetailsActivity extends AppCompatActivity {
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
             }
-
             @Override
             public void onTextChanged(CharSequence text, int i, int i1, int i2) {
                 ArrayList<ReligiousHousesData> religiousHousesData = new ArrayList<>();
@@ -96,15 +95,6 @@ public class ReligiousHousesDetailsActivity extends AppCompatActivity {
                 if (religiousHousesDataArrayList.size() > 0) {
                     storeDataInDB(religiousHousesDataArrayList);
                 }
-
-
-               /* // online data
-                int size = response.body().getReligiousHousesData().size();
-                for (int i = 0; i < size; i++) {
-                    religiousHousesDataArrayList.add(response.body().getReligiousHousesData().get(i));
-                }
-                adapter = new ReligiousHousesDataAdapter(getApplicationContext(), religiousHousesDataArrayList);
-                rvReligiousHousesData.setAdapter(adapter);*/
             }
 
             @Override

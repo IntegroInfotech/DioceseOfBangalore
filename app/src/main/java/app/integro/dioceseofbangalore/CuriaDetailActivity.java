@@ -19,7 +19,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class CuriaDetailActivity extends AppCompatActivity {
-
     private int itemId;
     private RecyclerView rvCuria2;
     private ArrayList<CuriaData> curiaDataArrayList;

@@ -106,16 +106,6 @@ public class FragmentHome extends Fragment {
                 startActivity(intent);
             }
         });
-/*
-        tvAdvertisement.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(getContext(), AdvertisementActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-            }
-        });*/
-
 
         tvPalanaBavan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,7 +122,6 @@ public class FragmentHome extends Fragment {
                 startActivity(intent);
             }
         });
-
 
         llMessage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -179,7 +168,6 @@ public class FragmentHome extends Fragment {
             }
         });
     }
-
 
     private void getNews() {
         String date = "2017-11-01 23:26:29";

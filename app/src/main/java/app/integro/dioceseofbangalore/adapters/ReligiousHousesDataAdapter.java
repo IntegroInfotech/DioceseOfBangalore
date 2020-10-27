@@ -68,7 +68,6 @@ public class ReligiousHousesDataAdapter extends RecyclerView.Adapter<ReligiousHo
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-
         TextView tvTitle;
         TextView tvDescription;
         ImageView ivInstitutionMap;

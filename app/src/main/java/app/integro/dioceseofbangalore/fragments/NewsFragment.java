@@ -25,7 +25,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class NewsFragment extends Fragment {
-
     private ArrayList<News> newsArrayList;
     private RecyclerView rvNews;
     private NewsAdapter newsAdapter;

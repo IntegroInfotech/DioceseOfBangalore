@@ -36,12 +36,10 @@ public class PrincipalMessageActivity extends AppCompatActivity implements Adapt
     private RecyclerView rvMessage;
     private ExpandableLayout elBishopsEngagements;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
-
 
         rvMessage = findViewById(R.id.rvPrincipalMessage);
         principalMessageArrayList = new ArrayList<>();

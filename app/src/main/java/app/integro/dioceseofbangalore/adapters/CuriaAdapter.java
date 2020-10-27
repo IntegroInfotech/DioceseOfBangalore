@@ -55,9 +55,7 @@ public class CuriaAdapter extends RecyclerView.Adapter<CuriaAdapter.MyViewHolder
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-
         private TextView tvTitle;
-
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.tvTitle);

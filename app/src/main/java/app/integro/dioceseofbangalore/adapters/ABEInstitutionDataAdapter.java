@@ -40,7 +40,6 @@ public class ABEInstitutionDataAdapter extends RecyclerView.Adapter<ABEInstituti
         ABEInstitutionData ABEInstitutionData = abrInstitutionDataArrayList.get(position);
         holder.tvTitle.setText(ABEInstitutionData.getName());
         holder.tvDescription.setText(ABEInstitutionData.getDescription());
-
         holder.ivInstitutionMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,15 +65,12 @@ public class ABEInstitutionDataAdapter extends RecyclerView.Adapter<ABEInstituti
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-
         TextView tvTitle;
         TextView tvDescription;
         ImageView ivInstitutionMap;
 
-
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvDescription = itemView.findViewById(R.id.tvDescription2);
             ivInstitutionMap = itemView.findViewById(R.id.ivInstitutionMap);

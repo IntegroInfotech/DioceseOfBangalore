@@ -297,7 +297,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         if (currentUser == null) {
 
                         }
-
                         if (TextUtils.isEmpty(email.getText().toString())) {
                             email.setError("Please Enter E - mail ID");
                             signInFlag = false;

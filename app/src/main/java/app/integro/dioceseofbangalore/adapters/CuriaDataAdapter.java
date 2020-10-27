@@ -34,7 +34,6 @@ public class CuriaDataAdapter extends RecyclerView.Adapter<CuriaDataAdapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         CuriaData curiaData=curiaDataArrayList.get(position);
-
         holder.tvTitle.setText(curiaData.getTitle());
         holder.tvAddress.setText(curiaData.getDescription());
     }
@@ -47,10 +46,8 @@ public class CuriaDataAdapter extends RecyclerView.Adapter<CuriaDataAdapter.MyVi
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView tvTitle;
         TextView tvAddress;
-
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvAddress = itemView.findViewById(R.id.tvAddress);
         }

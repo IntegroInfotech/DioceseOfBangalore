@@ -21,7 +21,6 @@ import app.integro.dioceseofbangalore.models.NewsImages;
 public class NewsImagesAdapter extends PagerAdapter {
     private ArrayList<NewsImages> newsImagesArrayList;
     private Context context;
-
     public NewsImagesAdapter(Context context, ArrayList<NewsImages> newsImagesArrayList) {
         this.context = context;
         this.newsImagesArrayList = newsImagesArrayList;

@@ -68,9 +68,7 @@ public class CustomSwipeAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, final int position) {
         View view = LayoutInflater.from(context).inflate(R.layout.gospel_layout, container, false);
-
         final WordOfGod word = wordofgod.get(position);
-
         TextView author =  view.findViewById(R.id.author);
         TextView gospelTitle =  view.findViewById(R.id.gospelTitle);
         final TextView wordOfGod =  view.findViewById(R.id.wordOfGod);

@@ -55,7 +55,6 @@ public class OrganisationAdapter extends RecyclerView.Adapter<OrganisationAdapte
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         private TextView tvTitle;
-
         public MyViewHolder(View itemView) {
             super(itemView);
             tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);

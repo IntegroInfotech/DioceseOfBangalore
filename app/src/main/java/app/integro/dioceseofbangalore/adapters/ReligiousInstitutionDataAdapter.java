@@ -19,9 +19,7 @@ import app.integro.dioceseofbangalore.R;
 import app.integro.dioceseofbangalore.models.ReligiousInstitutionData;
 
 public class ReligiousInstitutionDataAdapter extends RecyclerView.Adapter<ReligiousInstitutionDataAdapter.MyViewHolder> {
-
     private static final String TAG = "ReligiousInstitutionDat";
-
     private Context context;
     private List<ReligiousInstitutionData> dataListArrayList;
 

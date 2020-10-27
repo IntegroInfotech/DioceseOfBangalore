@@ -58,7 +58,6 @@ public class CircularAdapter extends RecyclerView.Adapter<CircularAdapter.MyView
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView tvTitle;
         TextView tvDownload;
-
         public MyViewHolder(View itemView) {
             super(itemView);
             tvTitle =  itemView.findViewById(R.id.tvTitle);

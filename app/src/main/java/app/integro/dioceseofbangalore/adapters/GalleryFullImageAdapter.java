@@ -46,7 +46,6 @@ public class GalleryFullImageAdapter extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, final int position) {
-
         ImageView ivFullImage;
         ImageView ivShare;
         TextView tvCount;
@@ -56,7 +55,6 @@ public class GalleryFullImageAdapter extends PagerAdapter {
         ivFullImage =  view.findViewById(R.id.ivFullImage);
         tvCount =  view.findViewById(R.id.tvCount);
         ivShare = view.findViewById(R.id.ivShare);
-
         int count = position + 1;
         tvCount.setText("" + count + " / " + "" + galleryArrayList.size());
 
