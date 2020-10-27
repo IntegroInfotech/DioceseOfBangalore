@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "875565222004",
+    "firebase_url": "https://arcgdiocesofbangalore.firebaseio.com",
+    "project_id": "arcgdiocesofbangalore",
+    "storage_bucket": "arcgdiocesofbangalore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875565222004:android:47828635b53ac830",
+        "android_client_info": {
+          "package_name": "app.integro.dioceseofbangalore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875565222004-u4v45uiim243fuetkc51m9jrm2uuocj8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.integro.dioceseofbangalore",
+            "certificate_hash": "ac460886aa933013ad85903b2e2f6eb536d03446"
+          }
+        },
+        {
+          "client_id": "875565222004-5q66kcoj8a69bhofbge1lsqbg1qrrnoj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.integro.dioceseofbangalore",
+            "certificate_hash": "34a5eb9276ff3894105cbad569bc06a64cfa743b"
+          }
+        },
+        {
+          "client_id": "875565222004-hiqstgovnj8hk4h7qac3jgfgnrrvctdi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUxtqVYzxjqNsSxCUfnCC_L82iX0gkVW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875565222004-hiqstgovnj8hk4h7qac3jgfgnrrvctdi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

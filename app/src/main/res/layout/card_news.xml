@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginRight="5sp"
+        app:cardBackgroundColor="#fdc10c">
+
+        <LinearLayout
+            android:id="@+id/rlNews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2sp"
+                android:background="@color/colorRed"
+                tools:ignore="SmallSp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_color"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="0sp"
+                    android:layout_height="50sp"
+                    android:layout_weight="1.6"
+                    android:fontFamily="@font/cuprum_italic"
+                    android:gravity="start|center"
+                    android:paddingStart="10sp"
+                    android:text="date"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="18sp"
+                    tools:ignore="RtlSymmetry" />
+
+                <ImageView
+                    android:layout_width="0sp"
+                    android:layout_height="50sp"
+                    android:layout_weight="0.4"
+                    android:background="@color/colorOrange"
+                    android:padding="3sp"
+                    android:src="@drawable/logo051" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivNews"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_placeholder" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_color"
+                android:fontFamily="@font/slabo27px_regular"
+                android:gravity="start|center"
+                android:minLines="2"
+                android:padding="10sp"
+                android:text="Title"
+                android:textColor="@color/colorRed"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

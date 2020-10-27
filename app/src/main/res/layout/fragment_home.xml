@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5"
+    tools:context="app.integro.dioceseofbangalore.fragments.FragmentHome">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back3"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo2"
+        tools:ignore="ContentDescription" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200sp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200sp"
+                    android:background="@color/colorBlack"
+                    android:paddingTop="25sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dp"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/border"
+                    android:gravity="bottom">
+
+                    <LinearLayout
+                        android:id="@+id/llMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom|end"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="0sp"
+                            android:layout_height="50sp"
+                            android:layout_weight="0.25"
+                            android:background="@color/colorRed"
+                            android:padding="5sp"
+                            android:src="@drawable/logo051"
+                            tools:ignore="ContentDescription" />
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.75"
+                            android:orientation="vertical"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/tvPrincipal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0sp"
+                                android:layout_weight="1"
+                                android:background="#8dd7d7d7"
+                                android:fontFamily="@font/slabo27px_regular"
+                                android:gravity="center|start"
+                                android:paddingStart="10sp"
+                                android:paddingLeft="10sp"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/colorOrange"
+                                android:textSize="20sp"
+                                tools:ignore="NestedWeights,RtlSymmetry" />
+
+                            <TextView
+                                android:id="@+id/tvDesignation"
+                                android:layout_width="match_parent"
+                                android:layout_height="0sp"
+                                android:layout_weight="1"
+                                android:background="#8dd7d7d7"
+                                android:gravity="center|start"
+                                android:paddingStart="10sp"
+                                android:paddingLeft="10sp"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/colorOrange"
+                                android:textSize="15sp"
+                                tools:ignore="RtlSymmetry" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="@color/colorBackground"
+                tools:ignore="SmallSp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="70sp"
+                app:cardBackgroundColor="#fdc20f"
+                app:cardCornerRadius="5dp"
+                app:contentPaddingBottom="1dp"
+                app:contentPaddingLeft="5dp"
+                app:contentPaddingRight="5dp"
+                app:contentPaddingTop="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_color"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/llChurches"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/text_link_selector_bg"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_weight="0.5"
+                            android:padding="5sp"
+                            android:src="@drawable/ic_church"
+                            tools:ignore="ContentDescription,NestedWeights" />
+
+                        <TextView
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/slabo27px_regular"
+                            android:gravity="center|start"
+                            android:text="PARISHES"
+                            android:textColor="@color/colorRed"
+                            android:textSize="18sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.3sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="18sp"
+                        android:layout_marginBottom="18sp"
+                        android:background="@color/colorRed" />
+
+                    <LinearLayout
+                        android:id="@+id/llInstitutions"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/text_link_selector_bg"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_weight="0.5"
+                            android:padding="7sp"
+                            android:src="@drawable/institutions"
+                            tools:ignore="ContentDescription,NestedWeights" />
+
+                        <TextView
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/slabo27px_regular"
+                            android:gravity="center|start"
+                            android:text="INSTITUTIONS"
+                            android:textColor="@color/colorRed"
+                            android:textSize="18sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5sp"
+                android:background="@color/colorRed" />
+
+            <TextView
+                android:id="@+id/tvSaint"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:fontFamily="@font/slabo27px_regular"
+                android:gravity="center"
+                android:text="DIOCESAN NEWS"
+                android:textColor="@color/colorRed"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:cardCornerRadius="5sp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/building4"
+                        tools:ignore="ContentDescription" />
+
+                    <com.github.demono.AutoScrollViewPager
+                        android:id="@+id/vpNews"
+                        android:layout_width="match_parent"
+                        android:layout_height="200sp" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="70sp"
+                app:cardBackgroundColor="#fdc20f"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="0.1sp"
+                app:contentPaddingBottom="1dp"
+                app:contentPaddingLeft="5dp"
+                app:contentPaddingRight="5dp"
+                app:contentPaddingTop="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_color"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <TextView
+                        android:id="@+id/tvPalanaBavan"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/text_link_selector_bg"
+                        android:fontFamily="@font/slabo27px_regular"
+                        android:gravity="center"
+                        android:text="PAALANAA BHAVANA"
+                        android:textColor="@color/colorRed"
+                        android:textSize="18sp"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="0.3sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="18sp"
+                        android:layout_marginBottom="18sp"
+                        android:background="@color/colorRed" />
+
+                    <TextView
+                        android:id="@+id/tvReligiousHouses"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/text_link_selector_bg"
+                        android:fontFamily="@font/slabo27px_regular"
+                        android:gravity="center"
+                        android:text="RELIGIOUS HOUSES"
+                        android:textColor="@color/colorRed"
+                        android:textSize="18sp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.github.demono.AutoScrollViewPager
+                android:id="@+id/rvAds"
+                android:layout_width="match_parent"
+                android:layout_height="70sp"
+                android:orientation="horizontal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5sp"
+                android:background="@color/colorRed" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2sp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/colorBackground"
+                tools:ignore="SmallSp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200sp">
+
+                <FrameLayout
+                    android:id="@+id/youtube_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

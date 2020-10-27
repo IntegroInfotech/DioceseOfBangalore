@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10sp"
+    android:weightSum="2">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1.94">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_color"
+            android:orientation="vertical"
+            android:padding="10sp">
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/slabo27px_regular"
+                android:gravity="end"
+                android:text="Luke 4:12-24"
+                android:textColor="@color/colorRed"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/gospelTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/slabo27px_regular"
+                android:gravity="left"
+                android:padding="10sp"
+                android:text="Hello World"
+                android:textColor="@color/colorRed"
+                android:textSize="18sp"
+                tools:ignore="RtlHardcoded" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/wordOfGod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/slabo27px_regular"
+                        android:padding="10sp"
+                        android:text="Content"
+                        android:textColor="@color/colorRed"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35sp"
+                        android:layout_below="@+id/wordOfGodcontainer"
+                        android:layout_marginTop="10sp"
+                        android:drawableLeft="@drawable/ic_share"
+                        android:background="@color/colorWhite"
+                        android:fontFamily="@font/slabo27px_regular"
+                        android:text="Share"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="0.06"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/slabo27px_regular"
+            android:text="@string/swipeLeft"
+            android:textColor="@color/colorRed"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/slabo27px_regular"
+            android:gravity="end"
+            android:text="@string/swipeToRight"
+            android:textColor="@color/colorRed"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

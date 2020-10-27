@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_color">
+
+    <ImageView
+        android:id="@+id/custNotificationLogo"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5sp"
+        android:src="@drawable/logo051" />
+
+    <TextView
+        android:id="@+id/custNotificationTitle"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/custNotificationLogo"
+        android:fontFamily="@font/slabo27px_regular"
+        android:gravity="center_vertical"
+        android:text="@string/app_name"
+        android:textColor="@color/colorRed"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/custNotificationDescpn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custNotificationLogo"
+        android:fontFamily="@font/slabo27px_regular"
+        android:padding="10sp"
+        android:text="Description"
+        android:textSize="15sp"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>

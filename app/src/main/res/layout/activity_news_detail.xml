@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.integro.dioceseofbangalore.NewsDetailActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back3" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/logo2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            app:cardBackgroundColor="#fdc10c"
+            app:cardCornerRadius="10sp"
+            app:contentPaddingBottom="1dp"
+            app:contentPaddingLeft="1dp"
+            app:contentPaddingRight="1dp"
+            app:contentPaddingTop="1sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/background_color"
+                android:orientation="vertical">
+
+                <com.github.demono.AutoScrollViewPager
+                    android:id="@+id/newsImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="250sp"
+                    android:src="@drawable/bg_placeholder" />
+
+                <ImageView
+                    android:id="@+id/ivImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="250sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_placeholder"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cuprum_italic"
+                    android:gravity="center|end"
+                    android:paddingRight="10sp"
+                    android:paddingTop="10sp"
+                    android:text="Date"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/slabo27px_regular"
+                    android:gravity="center|start"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:text="Title"
+                    android:textColor="@color/colorRed"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_margin="10sp"
+                    android:background="@color/colorOrange" />
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:fontFamily="@font/slabo27px_regular"
+                    android:gravity="center|start"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:paddingBottom="10sp"
+                    android:text="Description"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:gravity="center"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:text="  SHARE"
+                    android:drawableLeft="@drawable/ic_share"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/slabo27px_regular"
+                    android:textColor="@color/colorRed" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

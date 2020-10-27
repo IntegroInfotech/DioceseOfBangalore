@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="10sp"
+            app:cardBackgroundColor="#fdc10d"
+            app:cardCornerRadius="10sp"
+            app:contentPaddingBottom="1sp"
+            app:contentPaddingLeft="10sp"
+            app:contentPaddingRight="10sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_link_selector_bg"
+                    android:fontFamily="@font/slabo27px_regular"
+                    android:gravity="center|start"
+                    android:minLines="2"
+                    android:padding="10sp"
+                    android:drawableEnd="@drawable/ic_right"
+                    android:text="Title"
+                    android:textColor="@color/colorRed"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>
