@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onStart() {
         super.onStart();
         FirebaseUser vipuser = firebaseAuth.getCurrentUser();
+        Log.i(TAG, "onStart: "+vipuser);
         if (vipuser != null) {
             btnVIP.setEnabled(false);
             flag = true;
@@ -68,7 +70,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             btnVIP.setVisibility(View.VISIBLE);
             btnVIP.setEnabled(true);
             btnLogout.setVisibility(View.GONE);
-
             FirebaseMessaging.getInstance().subscribeToTopic("archdiocese");
         }
     }
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         firebaseAuth = FirebaseAuth.getInstance();
 
         btnLogout = findViewById(R.id.btnLogout);
+		
         TextView tvDailyReading = findViewById(R.id.tvDailyReading);
         TextView tvCatholicPrayer = findViewById(R.id.tvCatholicPrayer);
         TextView tvSaint = findViewById(R.id.tvSaint);
@@ -309,14 +311,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                             Email = email.getText().toString();
                             Password = password.getText().toString();
                             firebaseAuth = FirebaseAuth.getInstance();
-                            firebaseAuth.signInWithEmailAndPassword(Email, Password).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                            firebaseAuth.signInWithEmailAndPassword(Email, Password)
+							.addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                                 @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
                                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                                         if (user != null) {
-                                            startActivity(getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName()).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                                            startActivity(getBaseContext().getPackageManager()
+											.getLaunchIntentForPackage(getBaseContext().getPackageName())
+											.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                                         }
                                     } else {
                                         Toast.makeText(MainActivity.this, "Please Contact Admin.", Toast.LENGTH_SHORT).show();

@@ -18,6 +18,6 @@
         android:layout_alignParentTop="true"
         android:src="@drawable/logo2" />
 
-    <include layout="@layout/newappbar_layout" />
+    <include layout="@layout/new_appbar_layout" />
 
 </RelativeLayout>

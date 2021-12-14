@@ -47,6 +47,7 @@ public class BibleActivity extends AppCompatActivity implements NavigationView.O
     private CustomSwipeAdapter adapter;
     private ArrayList<WordOfGod> wordOfGodArrayList;
     private AppBarLayout appBarLayout;
+
     @SuppressLint("SimpleDateFormat")
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     private SimpleDateFormat dateFormat1 = new SimpleDateFormat("d MMMM yyyy", /*Locale.getDefault()*/Locale.ENGLISH);
@@ -65,15 +66,17 @@ public class BibleActivity extends AppCompatActivity implements NavigationView.O
 
         viewPager = findViewById(R.id.fragmentHolder);
         tabLayout = findViewById(R.id.tabs);
-        appBarLayout = findViewById(R.id.AppbarLay);
+
         ImageView arrow = findViewById(R.id.date_picker_arrow);
         LinearLayout datePickerButton = findViewById(R.id.date_picker_button);
         TextView textView = findViewById(R.id.name);
         textView.setText("WORD OF GOD");
 
+        appBarLayout = findViewById(R.id.AppbarLay);
         compactCalendarView = findViewById(R.id.compactcalendar_view);
         compactCalendarView.setLocale(TimeZone.getDefault(), /*Locale.getDefault()*/Locale.ENGLISH);
         compactCalendarView.setShouldDrawDaysHeader(true);
+
         compactCalendarView.setListener(new CompactCalendarView.CompactCalendarViewListener() {
             @Override
             public void onDayClick(Date dateClicked) {
@@ -99,7 +102,6 @@ public class BibleActivity extends AppCompatActivity implements NavigationView.O
                 } else {
                     ViewCompat.animate(arrow).rotation(90).start();
                 }
-
                 isExpanded = !isExpanded;
                 appBarLayout.setExpanded(isExpanded, true);
             }
@@ -119,9 +121,8 @@ public class BibleActivity extends AppCompatActivity implements NavigationView.O
         }
     }
 
-    private void getWordOfGod(String date) {
+    private boolean getWordOfGod(String date) {
         Log.i(TAG, "getWordOfGod: " + date);
-
         Call<WordofgodList> call = ApiClients.getClient().create(ApiServices.class).getWordOfGod(date);
         call.enqueue(new Callback<WordofgodList>() {
             @Override
@@ -154,6 +155,7 @@ public class BibleActivity extends AppCompatActivity implements NavigationView.O
                 Log.i(TAG, "onFailure: " + t.getMessage());
             }
         });
+        return flag;
     }
 
     @Override
@@ -166,7 +168,6 @@ public class BibleActivity extends AppCompatActivity implements NavigationView.O
 
     private void setSubtitle(String subtitle) {
         TextView datePickerTextView = findViewById(R.id.date_picker_text_view);
-
         if (datePickerTextView != null) {
             datePickerTextView.setText(subtitle);
         }

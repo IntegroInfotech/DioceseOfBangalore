@@ -14,8 +14,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.github.demono.AutoScrollViewPager;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -66,7 +64,6 @@ public class FragmentHome extends Fragment {
     private ArrayList<ADS> adsArrayList;
     private AutoScrollViewPager rvAds;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
@@ -89,7 +86,6 @@ public class FragmentHome extends Fragment {
         LinearLayout llMessage = view.findViewById(R.id.llMessage);
         LinearLayout llInstitutions = view.findViewById(R.id.llInstitutions);
         LinearLayout llChurches = view.findViewById(R.id.llChurches);
-
 
         llInstitutions.setOnClickListener(new View.OnClickListener() {
             @Override

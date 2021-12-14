@@ -19,6 +19,8 @@ public class WebSiteFragment extends Fragment {
     private WebView webView;
     private ProgressBar progressBar;
     @Override
+
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_web_site, container, false);
         webView = (WebView) view.findViewById(R.id.webFragment);
@@ -27,6 +29,20 @@ public class WebSiteFragment extends Fragment {
         webView.loadUrl(url);
         openWebView();
         return view;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        webView.onPause();
+        webView.pauseTimers();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        webView.onResume();
+        webView.resumeTimers();
     }
 
     @SuppressLint("SetJavaScriptEnabled")

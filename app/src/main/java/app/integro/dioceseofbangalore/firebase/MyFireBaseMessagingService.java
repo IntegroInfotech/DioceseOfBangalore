@@ -28,13 +28,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Map;
 
-import app.integro.dioceseofbangalore.ParishesActivity;
 import app.integro.dioceseofbangalore.MainActivity;
+import app.integro.dioceseofbangalore.ParishesActivity;
 import app.integro.dioceseofbangalore.R;
-import app.integro.dioceseofbangalore.models.ADS;
-import app.integro.dioceseofbangalore.models.Parishes;
 import app.integro.dioceseofbangalore.models.News;
 import app.integro.dioceseofbangalore.models.Notification;
+import app.integro.dioceseofbangalore.models.Parishes;
 
 @SuppressLint("MissingFirebaseInstanceTokenRefresh")
 public class MyFireBaseMessagingService extends FirebaseMessagingService {
@@ -51,9 +50,7 @@ public class MyFireBaseMessagingService extends FirebaseMessagingService {
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-
         Log.d(TAG, "From: " + remoteMessage.getFrom());
-
         if (remoteMessage.getData().size() > 0) {
             Log.d(TAG, "data payload: " + remoteMessage.getData());
         }
@@ -74,7 +71,6 @@ public class MyFireBaseMessagingService extends FirebaseMessagingService {
             String description = null;
             NotificationCompat.Builder notificationBuilder;
             PendingIntent pendingIntent;
-
             if (type == 2) {
                 Log.d(TAG, "In type 2 ");
                 Parishes parishesItem = (Parishes) new Gson().fromJson(body, Parishes.class);
@@ -105,7 +101,6 @@ public class MyFireBaseMessagingService extends FirebaseMessagingService {
                 description = notificationItem.getDescription();
                 intent = new Intent(this, MainActivity.class);
                 intent.putExtra(TYPE, NOTIFICATION_KEY);
-
                 RemoteViews remoteViews = new RemoteViews(getPackageName(), R.layout.notification_custom);
                 remoteViews.setImageViewResource(R.id.custNotificationLogo, R.drawable.logo051);
                 remoteViews.setTextViewText(R.id.custNotificationTitle, title);

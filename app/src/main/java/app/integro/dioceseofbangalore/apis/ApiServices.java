@@ -55,7 +55,7 @@ public interface ApiServices {
     Call<CircularList> getCircularList(@Field("updated_at") String updated_at);
 
     @FormUrlEncoded
-    @POST("/diocesan_engagement.php")
+    @POST("diocesan_engagement.php")
     Call<CircularList> getBishopsEngagementList(@Field("updated_at") String updated_at);
 
     @FormUrlEncoded

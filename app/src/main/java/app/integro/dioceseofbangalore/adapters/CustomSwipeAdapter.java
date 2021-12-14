@@ -20,13 +20,15 @@ import app.integro.dioceseofbangalore.models.WordOfGod;
 
 public class CustomSwipeAdapter extends PagerAdapter {
     private int size;
-    private Context context;
 
+    private Context context;
     private List<WordOfGod> wordofgod;
+    private String date;
+
     private String[] PageTitle = {"1st Reading", "Psalm", "Gospel"};
     private String[] PageTitle1 = {"1st Reading", "Psalm", "2nd Reading", "Gospel" };
     private String title = null;
-    private String date;
+
 
     public CustomSwipeAdapter(Context context) {
         this.context = context;

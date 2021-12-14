@@ -127,5 +127,40 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="10sp"
+            app:cardBackgroundColor="#fdc10d"
+            app:cardCornerRadius="10sp"
+            app:contentPaddingBottom="1sp"
+            app:contentPaddingLeft="10sp"
+            app:contentPaddingRight="10sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_link_selector_bg"
+                    android:drawableRight="@drawable/ic_right"
+                    android:fontFamily="@font/slabo27px_regular"
+                    android:gravity="center|start"
+                    android:minLines="2"
+                    android:padding="10sp"
+                    android:text="CENTRES IN THE ARCHDIOCESE"
+                    android:textColor="@color/colorRed"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
     </LinearLayout>
 </RelativeLayout>
